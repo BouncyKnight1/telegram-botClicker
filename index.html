@@ -10,18 +10,35 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 50px;
+            background-color: #121212;
+            color: white;
         }
-        button {
-            font-size: 20px;
-            padding: 10px 20px;
+        .click-button {
+            width: 100px;
+            height: 100px;
             margin-top: 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+        .click-button img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 5px 5px 15px #0d0d0d, -5px -5px 15px #292929;
+        }
+        .click-button:active {
+            transform: scale(0.9);
         }
     </style>
 </head>
 <body>
-    <h2>Привет, <span id="username">Игрок</span>!</h2>
-    <h3>Очки: <span id="score">0</span></h3>
-    <button onclick="increaseScore()">Клик!</button>
+    <h2>РџСЂРёРІРµС‚, <span id="username">РРіСЂРѕРє</span>!</h2>
+    <h3>РћС‡РєРё: <span id="score">0</span></h3>
+    <button class="click-button" onclick="increaseScore()">
+        <img src="https://i.imgur.com/YOUR_IMAGE.png" alt="Clicker">
+    </button>
     
     <script>
         let score = 0;
