@@ -52,6 +52,7 @@
         
         if (window.Telegram && Telegram.WebApp) {
             Telegram.WebApp.expand();
+            console.log(Telegram.WebApp.initDataUnsafe);
             const user = Telegram.WebApp.initDataUnsafe?.user;
             if (user) {
                 document.getElementById("username").innerText = user.first_name;
